@@ -11,7 +11,7 @@ import com.rajivraghu.hibernate.model.Bank;
 public class BankDemo {
 	
 	public static void main(String[] args) {
-
+		/** start **/
 		BankDemo application = new BankDemo();
 		Bank bank = new Bank();
 		Address add = new Address();
