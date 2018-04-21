@@ -11,7 +11,7 @@ import com.rajivraghu.hibernate.model.Bank;
 public class BankDemo {
 	
 	public static void main(String[] args) {
-
+		/** start **/
 		BankDemo application = new BankDemo();
 		Bank bank = new Bank();
 		Address add = new Address();
@@ -22,7 +22,7 @@ public class BankDemo {
 		add.setLine3("line3");
 		bank.setAddress(add);
 		application.saveBank(bank);
-		
+		/** hello **/
 		/*  Locale locale = new Locale("fr");
           NumberFormat numberFormat = NumberFormat.getInstance(locale);
           String formattedValue = numberFormat.format(1000000);
