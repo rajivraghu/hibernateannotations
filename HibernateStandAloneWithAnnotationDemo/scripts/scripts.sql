@@ -1,0 +1,37 @@
+desc bank
+Name             Null     Type               
+---------------- -------- ------------------ 
+ID               NOT NULL NUMBER(10)         
+LINE1                     VARCHAR2(255 CHAR) 
+LINE2                     VARCHAR2(255 CHAR) 
+LINE3                     VARCHAR2(255 CHAR) 
+BANK_MANAGER              VARCHAR2(255 CHAR) 
+BANK_NAME                 VARCHAR2(255 CHAR) 
+IS_INTERNATIONAL          VARCHAR2(1)        
+CREATED_DATE              DATE  
+
+create table BANK_CONTACT
+(
+BANK_ID NUMBER(10),
+CONTACT_NAME VARCHAR2(255 CHAR) 
+);
+
+ CREATE SEQUENCE ID_SEQ MINVALUE 1 
+MAXVALUE 99999999999999999999 
+START WITH 1 
+INCREMENT BY 1 CACHE 20;
+
+create table BANK_EMPLOYEES
+(
+BANK_ID NUMBER(10),
+EMPLOYEE_NAME VARCHAR2(255 CHAR), 
+EMPLOYEE_DESIGNATION VARCHAR2(255 CHAR) 
+);
+
+create table BANK_HELP_INFO
+(
+BANK_ID NUMBER(10),
+PHONE VARCHAR2(255 CHAR), 
+FAX VARCHAR2(255 CHAR), 
+EMAIL VARCHAR2(255 CHAR) 
+);

@@ -7,9 +7,18 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 
+import com.rajivraghu.hibernate.model.Account;
 import com.rajivraghu.hibernate.model.Address;
 import com.rajivraghu.hibernate.model.Bank;
+import com.rajivraghu.hibernate.model.Credential;
+import com.rajivraghu.hibernate.model.Device;
+import com.rajivraghu.hibernate.model.Employee;
+import com.rajivraghu.hibernate.model.Identification;
+import com.rajivraghu.hibernate.model.Loan;
+import com.rajivraghu.hibernate.model.Person;
 import com.rajivraghu.hibernate.model.Student;
+import com.rajivraghu.hibernate.model.Transaction;
+import com.rajivraghu.hibernate.model.User;
 
 @SuppressWarnings("deprecation")
 public class HibernateUtil {
@@ -31,6 +40,16 @@ public class HibernateUtil {
 		configuration.addAnnotatedClass(Student.class);
 		configuration.addAnnotatedClass(Bank.class);
 		configuration.addAnnotatedClass(Address.class);
+		configuration.addAnnotatedClass(User.class);
+		configuration.addAnnotatedClass(Credential.class);
+		configuration.addAnnotatedClass(Transaction.class);
+		configuration.addAnnotatedClass(Account.class);
+		configuration.addAnnotatedClass(Loan.class);
+		configuration.addAnnotatedClass(Employee.class);
+		configuration.addAnnotatedClass(Device.class);
+		configuration.addAnnotatedClass(Person.class);
+		configuration.addAnnotatedClass(Identification.class);
+			
 		configuration.setProperties( new Properties(){
 			{
 			put("hibernate.connection.username","orderapp");
@@ -38,6 +57,7 @@ public class HibernateUtil {
 			put("hibernate.connection.url","jdbc:oracle:thin:@localhost:1521:ORCL");
 			put("hibernate.connection.driver_class","oracle.jdbc.driver.OracleDriver");
 			put("hibernate.show_sql", "true");
+			put("hibernate.hbm2ddl.auto","update");
 			
 		}});
 		
