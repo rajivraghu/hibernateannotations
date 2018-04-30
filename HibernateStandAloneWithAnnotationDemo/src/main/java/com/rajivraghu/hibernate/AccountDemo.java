@@ -16,7 +16,7 @@ public class AccountDemo {
 	
 	public static void main(String[] args) {
 		
-		
+		/** Demo **/
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session currentSession = sessionFactory.openSession();
 		currentSession.beginTransaction();
