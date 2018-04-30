@@ -26,7 +26,7 @@ public class CategoryJT {
 	@Column(name="CAT_DES")
 	private String category;
 
-	@OneToMany(cascade=CascadeType.ALL)
+	@OneToMany(cascade=CascadeType.ALL )
 	@JoinTable(name="CATE_ART", joinColumns=@JoinColumn(name="CAT_ID") , inverseJoinColumns=@JoinColumn(name="ARTICLE_ID"))
 	List<ArticleJT> articles;
 	
