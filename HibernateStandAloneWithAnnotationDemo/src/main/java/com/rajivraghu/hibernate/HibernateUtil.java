@@ -9,7 +9,11 @@ import org.hibernate.cfg.Configuration;
 
 import com.rajivraghu.hibernate.model.Account;
 import com.rajivraghu.hibernate.model.Address;
+import com.rajivraghu.hibernate.model.Article;
+import com.rajivraghu.hibernate.model.ArticleJT;
 import com.rajivraghu.hibernate.model.Bank;
+import com.rajivraghu.hibernate.model.Category;
+import com.rajivraghu.hibernate.model.CategoryJT;
 import com.rajivraghu.hibernate.model.Credential;
 import com.rajivraghu.hibernate.model.Device;
 import com.rajivraghu.hibernate.model.Employee;
@@ -49,6 +53,12 @@ public class HibernateUtil {
 		configuration.addAnnotatedClass(Device.class);
 		configuration.addAnnotatedClass(Person.class);
 		configuration.addAnnotatedClass(Identification.class);
+		configuration.addAnnotatedClass(Category.class);
+		configuration.addAnnotatedClass(Article.class);
+		configuration.addAnnotatedClass(CategoryJT.class);
+		configuration.addAnnotatedClass(ArticleJT.class);
+		
+		
 			
 		configuration.setProperties( new Properties(){
 			{

@@ -24,8 +24,8 @@ public class UserDemo {
 		usr.setCred(cred);
 		currentSession.save(cred);
 		currentSession.getTransaction().commit();
-		User dbUser = (User) currentSession.get(User.class, 215050);
-		System.out.println(dbUser.getCred().getUserName());
+		/*User dbUser = (User) currentSession.get(User.class, 215050);
+		System.out.println(dbUser.getCred().getUserName());*/
 		
 	}
 

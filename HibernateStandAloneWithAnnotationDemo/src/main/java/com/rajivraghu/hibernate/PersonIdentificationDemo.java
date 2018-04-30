@@ -13,7 +13,8 @@ public class PersonIdentificationDemo {
 
 	
 	public static void main(String[] args) {
-	
+		/*** Person - Identification Bi directional ; ManyToOne Mapping ; here we save the child device first. Parent gets automatically saved */
+		/** From child we will be able to fetch the parent. from parent we will be able to fetch the child **/
 		SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
 		Session openSession = sessionFactory.openSession();
 		openSession.beginTransaction();
