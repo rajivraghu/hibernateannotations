@@ -14,6 +14,7 @@ import com.rajivraghu.hibernate.model.ArticleJT;
 import com.rajivraghu.hibernate.model.Bank;
 import com.rajivraghu.hibernate.model.Category;
 import com.rajivraghu.hibernate.model.CategoryJT;
+import com.rajivraghu.hibernate.model.CollegeStudent;
 import com.rajivraghu.hibernate.model.Credential;
 import com.rajivraghu.hibernate.model.Device;
 import com.rajivraghu.hibernate.model.Employee;
@@ -21,6 +22,7 @@ import com.rajivraghu.hibernate.model.Identification;
 import com.rajivraghu.hibernate.model.Loan;
 import com.rajivraghu.hibernate.model.Person;
 import com.rajivraghu.hibernate.model.Student;
+import com.rajivraghu.hibernate.model.Subject;
 import com.rajivraghu.hibernate.model.Transaction;
 import com.rajivraghu.hibernate.model.User;
 
@@ -57,6 +59,10 @@ public class HibernateUtil {
 		configuration.addAnnotatedClass(Article.class);
 		configuration.addAnnotatedClass(CategoryJT.class);
 		configuration.addAnnotatedClass(ArticleJT.class);
+		configuration.addAnnotatedClass(CollegeStudent.class);
+		configuration.addAnnotatedClass(Subject.class);
+
+		
 		
 		
 			
