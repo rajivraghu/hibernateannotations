@@ -7,11 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.UniqueConstraint;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "STUDENT")
+@Table(name = "STUDENT" , uniqueConstraints= @UniqueConstraint(columnNames = {"FIRST_NAME", "LAST_NAME"}))
 public class Student extends BaseAuditVO implements Serializable {
 
 	@Id

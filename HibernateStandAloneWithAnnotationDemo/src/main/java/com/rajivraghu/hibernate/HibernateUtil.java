@@ -18,13 +18,16 @@ import com.rajivraghu.hibernate.model.CollegeStudent;
 import com.rajivraghu.hibernate.model.Credential;
 import com.rajivraghu.hibernate.model.Device;
 import com.rajivraghu.hibernate.model.Employee;
+import com.rajivraghu.hibernate.model.FourWheeler;
 import com.rajivraghu.hibernate.model.Identification;
 import com.rajivraghu.hibernate.model.Loan;
 import com.rajivraghu.hibernate.model.Person;
 import com.rajivraghu.hibernate.model.Student;
 import com.rajivraghu.hibernate.model.Subject;
 import com.rajivraghu.hibernate.model.Transaction;
+import com.rajivraghu.hibernate.model.TwoWheeler;
 import com.rajivraghu.hibernate.model.User;
+import com.rajivraghu.hibernate.model.Vehicle;
 
 @SuppressWarnings("deprecation")
 public class HibernateUtil {
@@ -61,6 +64,14 @@ public class HibernateUtil {
 		configuration.addAnnotatedClass(ArticleJT.class);
 		configuration.addAnnotatedClass(CollegeStudent.class);
 		configuration.addAnnotatedClass(Subject.class);
+		configuration.addAnnotatedClass(Vehicle.class);
+		configuration.addAnnotatedClass(TwoWheeler.class);
+		configuration.addAnnotatedClass(FourWheeler.class);
+		
+		
+		
+		
+		
 
 		
 		

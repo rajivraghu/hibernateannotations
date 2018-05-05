@@ -21,7 +21,7 @@ public class HibernateStandAloneDemo {
 		/*
 		 * Save few objects with hibernate
 		 */
-		int studentId1 = application.saveStudent("sdas", "s", "Social");
+		int studentId1 = application.saveStudent("Shankarww", "shanmugh", "Social");
 /*		int studentId2 = application.saveStudent("Joshua", "Brill", "Science");
 		int studentId3 = application.saveStudent("Peter", "Pan", "Physics");
 		int studentId4 = application.saveStudent("Bill", "Laurent", "Maths");
@@ -75,6 +75,20 @@ public class HibernateStandAloneDemo {
 	    session.saveOrUpdate(dbInvnewobj);*/
 		session.getTransaction().commit();
 		session.close();
+		/*
+		
+		System.out.println("student id"+student.getId());
+		
+		
+		Session session2 = HibernateUtil.getSessionFactory().openSession();
+		session2.beginTransaction();
+		session2.delete(student);
+		student.setFirstName("sss");
+		session2.update(student);
+		session2.getTransaction().commit();
+		session2.close();
+		*/
+		
 		//System.out.println(dbInvnewobj.toString());
 
 		return 0;
