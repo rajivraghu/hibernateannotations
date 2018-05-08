@@ -11,6 +11,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cascade;
+
 @Entity
 @Table(name="IDENTIFICATIONS")
 public class Identification {
@@ -26,7 +28,7 @@ public class Identification {
 	@Column(name="ID_NUMBER")
 	private String number;
 	
-	@ManyToOne(cascade=CascadeType.ALL)
+	@ManyToOne
 	@JoinColumn(name="P_ID")
 	Person person;
 	

@@ -34,9 +34,9 @@ public class PersonIdentificationDemo {
 		
 		p.setName("Rajiv");
 		p.setIds(ids);
-		//openSession.save(p);
-		openSession.save(id);
-		openSession.save(id1);
+		openSession.save(p);
+		//openSession.save(id);
+		//openSession.save(id1);
 		openSession.getTransaction().commit();
 		/** Fetching of childs from parent **/
 		
@@ -46,6 +46,28 @@ public class PersonIdentificationDemo {
 		
 		Identification ident = (Identification) openSession.get(Identification.class, id.getId());
 		System.out.println("Fetching of parent from child"+ident.getPerson().toString());
+		openSession.close();
+		Session openSession2 = sessionFactory.openSession();
+		openSession2.beginTransaction();
+		
+		/** Getting parent and adding new the child **/
+	/*	Person dbPerson = (Person) openSession2.get(Person.class, p.getPersonId());
+		Identification id3 = new Identification();
+		id3.setIdentification("Aadhar");
+		id3.setNumber("A345");
+		id3.setPerson(dbPerson);
+		List<Identification> ids2 = dbPerson.getIds();
+		ids2.add(id3);
+		dbPerson.setIds(ids2);
+		
+		openSession2.saveOrUpdate(dbPerson);*/
+		
+		Person dbPerson = (Person) openSession2.get(Person.class, p.getPersonId());
+		dbPerson.getIds().remove(0);
+		openSession2.saveOrUpdate(dbPerson);
+		openSession2.getTransaction().commit();
+		openSession2.close();
+	
 		
 	}
 	

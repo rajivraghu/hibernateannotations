@@ -12,6 +12,7 @@ import com.rajivraghu.hibernate.model.Address;
 import com.rajivraghu.hibernate.model.Article;
 import com.rajivraghu.hibernate.model.ArticleJT;
 import com.rajivraghu.hibernate.model.Bank;
+import com.rajivraghu.hibernate.model.Book;
 import com.rajivraghu.hibernate.model.Category;
 import com.rajivraghu.hibernate.model.CategoryJT;
 import com.rajivraghu.hibernate.model.CollegeStudent;
@@ -19,14 +20,20 @@ import com.rajivraghu.hibernate.model.Credential;
 import com.rajivraghu.hibernate.model.Device;
 import com.rajivraghu.hibernate.model.Employee;
 import com.rajivraghu.hibernate.model.FourWheeler;
+import com.rajivraghu.hibernate.model.House;
 import com.rajivraghu.hibernate.model.Identification;
 import com.rajivraghu.hibernate.model.Loan;
 import com.rajivraghu.hibernate.model.Person;
+import com.rajivraghu.hibernate.model.Player;
+import com.rajivraghu.hibernate.model.Room;
 import com.rajivraghu.hibernate.model.Student;
 import com.rajivraghu.hibernate.model.Subject;
+import com.rajivraghu.hibernate.model.Team;
+import com.rajivraghu.hibernate.model.Territory;
 import com.rajivraghu.hibernate.model.Transaction;
 import com.rajivraghu.hibernate.model.TwoWheeler;
 import com.rajivraghu.hibernate.model.User;
+import com.rajivraghu.hibernate.model.UserTerritoryMapping;
 import com.rajivraghu.hibernate.model.Vehicle;
 
 @SuppressWarnings("deprecation")
@@ -67,14 +74,14 @@ public class HibernateUtil {
 		configuration.addAnnotatedClass(Vehicle.class);
 		configuration.addAnnotatedClass(TwoWheeler.class);
 		configuration.addAnnotatedClass(FourWheeler.class);
+		configuration.addAnnotatedClass(Team.class);
+		configuration.addAnnotatedClass(Player.class);
+		configuration.addAnnotatedClass(Territory.class);
+		configuration.addAnnotatedClass(UserTerritoryMapping.class);
+		configuration.addAnnotatedClass(Book.class);
 		
-		
-		
-		
-		
-
-		
-		
+		/*configuration.addAnnotatedClass(House.class);
+		configuration.addAnnotatedClass(Room.class);*/
 		
 			
 		configuration.setProperties( new Properties(){
@@ -85,6 +92,10 @@ public class HibernateUtil {
 			put("hibernate.connection.driver_class","oracle.jdbc.driver.OracleDriver");
 			put("hibernate.show_sql", "true");
 			put("hibernate.hbm2ddl.auto","update");
+			/*put("hibernate.cache.use_second_level_cache","true");
+			put("hibernate.cache.region.factory_class","org.hibernate.cache.ehcache.EhCacheRegionFactory");*/
+			
+			
 			
 		}});
 		

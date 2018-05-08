@@ -27,5 +27,13 @@
 			<artifactId>ojdbc6</artifactId>
 			<version>11.2.0</version>
 		</dependency> 
+		
+		<!-- Eh Cache -->
+	<dependency>
+    	<groupId>org.hibernate</groupId>
+    	<artifactId>hibernate-ehcache</artifactId>
+    	<version>4.0.1.Final</version>
+	</dependency>
+		
 	</dependencies>
 </project>

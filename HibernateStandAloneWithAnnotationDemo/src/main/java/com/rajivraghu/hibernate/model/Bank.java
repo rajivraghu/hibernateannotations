@@ -14,6 +14,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.MapKeyColumn;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -23,6 +25,7 @@ import javax.persistence.Transient;
 import org.hibernate.annotations.Type;
 
 @Entity
+@NamedQueries({ @NamedQuery(name="byId", query="from Bank where bankId = :bankId") })
 @Table(name = "BANK")
 public class Bank {
 	
